@@ -11,7 +11,6 @@ public class Particle {
 	
 	public Particle(String name, double mass, double radius, Vector3d position, Vector3d velocity, int[] colour) {
 		//Constructor method
-		
 		this.name = name;
 		this.mass = mass;
 		this.radius = radius;
@@ -22,29 +21,30 @@ public class Particle {
 	
 	public void update() {
 		// Update all attributes of the particle
-		
 		this.updatePosition();
 	}
 	
 	public void updatePosition() {
 		// Update the position of the particle
-		
 		position.add(velocity);
 	}
 	
 	public void updateVelocity(Vector3d acceleration) {
 		// Update the velocity of the particle
-		
 		velocity.add(acceleration);
 	}
 	
-	/*public static Vector3d updatePosition(Particle a) {
-		a.position = Vector3d.add(a.postition, a.velocity);
-	}*/
+	public boolean isCollisionBox(Box b) {
+		// Check if particle is colliding with box b
+		if(this.inBox(b)) {
+			return true;
+		}
+		return false;
+	}
 	
-	public static boolean isCollision(Particle a, Particle b) {
+	// Static methods
+	public static boolean isCollisionParticle(Particle a, Particle b) {
 		// Check if two particles are colliding
-		
 		if(Vector3d.distance(a, b) < (a.radius + b.radius))
 			return true;
 		return false;
