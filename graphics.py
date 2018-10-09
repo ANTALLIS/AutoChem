@@ -11,6 +11,8 @@ caption = pygame.display.set_caption('AutoChem')
 
 icon = pygame.image.load('icon.ico')
 
+black = (0,0,0)
+
 
 
 pygame.display.set_icon(icon)
@@ -32,6 +34,8 @@ def user_interface(background):
     for event in pygame.event.get():
             if event.type == pygame.QUIT:
               exiti = True
+            
+   pygame.draw.rect(Main_dispLay,black,(450,500),(50,100))
                 
   pygame.quit()
   quit()
