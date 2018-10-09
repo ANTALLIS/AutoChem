@@ -11,9 +11,11 @@ caption = pygame.display.set_caption('AutoChem')
 
 icon = pygame.image.load('icon.ico')
 
+
+
 pygame.display.set_icon(icon)
 
-background = pass 
+background = pygame.image.load('BA.png')
 
 clock = pygame.time.Clock()
 
