@@ -13,6 +13,20 @@ public class Box {
 		height = Math.abs(start.z - end.z);
 	}
 	
+	public void setSize(length, width, height) {
+		this.length = length;
+		this.width = width;
+		this.height = height;
+		
+		end.x = start.x + length;
+		end.y = start.y + width;
+		end.z = start.z + height;
+	}
+	
+	public void changeSize(length, width, height) {
+		
+	}
+	
 	public void setPosition(Vector3d position) {
 		start = position;
 		end.x = start.x + length;
@@ -25,19 +39,19 @@ public class Box {
 		end.add(coordinates);
 	}
 	
-	public setRotation() {
+	public void setRotation() {
 		// TODO: Add code
 	}
 	
-	public rotateBy() {
+	public void rotateBy() {
 		// TODO: Add code
 	}
 	
-	public setScale() {
+	public void setScale() {
 		// TODO: Add code
 	}
 	
-	public scaleBy() {
+	public void scaleBy() {
 		// TODO: Add code
 	}
 }
