@@ -27,3 +27,7 @@ hs_err_pid*
 
 # workspace files
 AutoChemWorkspace
+
+# folders
+build
+Ignored_files
