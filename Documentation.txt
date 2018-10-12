@@ -1,0 +1,65 @@
+Github repo: https://github.com/ANTALLIS/AutoChem
+
+
+
+
+Useful links:
+Python sockets - https://realpython.com/python-sockets/
+powdertoy - 
+nanome - 
+
+Languages:
+Graphics - python
+Background Calculation - java
+
+API format:
+
+[particleid, [posx, posy, posz]]
+
+Commands for Graphics:
+	DRAW [ID, colour(r, g, b), radius, x, y, z]: Draws with specified radius at coordinated with colour
+	CLEAR: Clears the screen of all particles
+	DELETE:
+	NEW:
+	MOVE:
+
+Commands for backend
+
+
+Objects
+Particle:
+	Methods:
+	getPos(): Returns the current position of the particle as an array [x, y, z]
+
+	Attributes:
+		Id: integer
+		Position : [x, y, z]
+		Velocity: change in  [x, y, z]
+Mass: m 
+		Radius: r
+		Forces: Electromagnetic force
+		             Gravity
+
+
+Bond: Line between particle(a) and and particle(b)
+	Methods:
+		getPos():
+Type: each type of particle will be colour coded
+	For example…
+		Red for a single atom
+		Blue for a molecule 
+		Green for subatomic particles...
+
+	Attributes:
+		Id: Integer
+		Strength: Integer
+		Connection: [Particle a, Particle b]
+
+Box: A hollow box that no particle can leave or enter; All particles bounce off
+	Methods:
+		getPos():
+		createBox(start_coord, end_coord): Create box at
+coordinates
+	Attributes;
+		start_pos: [x, y, z]
+		end_pos:   [x, y, z]
