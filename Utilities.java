@@ -8,5 +8,7 @@ public class Utilites{
 		}
 	}
 	
-	public class 
+	public class DistributedComp {
+		/* This class contains methods to share a single simulation between computers to speed up simulation time */
+	} 
 }
