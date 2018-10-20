@@ -7,8 +7,12 @@ public class Utilites{
 			// TODO: Write socket code here
 		}
 	}
-	
+
 	public class dataSaveModule {
 		/* This class is used to save simulation and particle data */
 	}
+
+	public class DistributedComp {
+		/* This class contains methods to share a single simulation between computers to speed up simulation time */
+	} 
 }
