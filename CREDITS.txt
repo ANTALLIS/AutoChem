@@ -1,0 +1,4 @@
+Antonio Allis - Backend code
+Jaffry Jaman - Graphics code
+
+UI sprites: https://opengameart.org/content/golden-ui-bigger-than-ever-edition

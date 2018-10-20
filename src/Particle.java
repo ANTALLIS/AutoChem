@@ -24,6 +24,10 @@ public class Particle {
 		this.updatePosition();
 	}
 	
+	public calulateCollision(Particle P) {
+		
+	}
+	
 	public void updatePosition() {
 		// Update the position of the particle
 		position.add(velocity);
@@ -42,10 +46,12 @@ public class Particle {
 		return false;
 	}
 	
+	
+	
 	// Static methods
 	public static boolean isCollisionParticle(Particle a, Particle b) {
 		// Check if two particles are colliding
-		if(Vector3d.distance(a, b) < (a.radius + b.radius))
+		if(Vector3d.distancesquared(a, b) < (a.radius + b.radius)*(a.radius + b.radius)))
 			return true;
 		return false;
 	}

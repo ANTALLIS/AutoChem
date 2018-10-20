@@ -10,7 +10,7 @@ nanome -
 
 Languages:
 Graphics - python
-Background Calculation - java
+Backend - java
 
 API format:
 

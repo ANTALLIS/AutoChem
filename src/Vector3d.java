@@ -65,15 +65,31 @@ public class Vector3d {
 		return c;
 	}
 	
+	public static double magnitudeSquared(Vector3d a) {
+		return (a.x*a.x)+(a.y*a.y)+(a.z*a.z)
+	}
 	
 	public static double magnitude(Vector3d a) {
-		return Math.sqrt((a.x*a.x)+(a.y*a.y)+(a.z*a.z));
+		return Math.sqrt(Vector3d.magnitudeSquared(a));
+	}
+	
+	public static double distancesquared(Vector3d a, Vector3d b) {
+		return Vector3d.magnitudesquared(Vector3d.sub(a, b));
 	}
 	
 	public static double distance(Vector3d a, Vector3d b) {
 		// Returns the distance between two vectors
-		return Math.sqrt((a.x-b.x)*(a.x-b.x)+
+		/*return Math.sqrt((a.x-b.x)*(a.x-b.x)+
 						(a.y-b.y)*(a.y-b.y)+
-						(a.z-b.z)*(a.z-b.z));
+						(a.z-b.z)*(a.z-b.z)); */
+		return Vector3d.magnitude(Vector3d.sub(a, b));
+	}
+	
+	public static double dotProduct(Vector3d a, Vector3d b) {
+		return 	
+	}
+	
+	public static Vector3d crossProduct(Vector3d a, Vector3d b) {
+		return 
 	}
 }
