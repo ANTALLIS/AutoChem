@@ -8,7 +8,7 @@ public class Utilites{
 		}
 	}
 
-	public class dataSaveModule {
+	public class DataSaveModule {
 		/* This class is used to save simulation and particle data */
 	}
 

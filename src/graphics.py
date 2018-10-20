@@ -1,6 +1,9 @@
 import pygame
 import time
 import random
+import os
+
+print(os.getcwd())
 
 pygame.init()
 
@@ -18,19 +21,19 @@ yellow = (255,255,0)
 
 pygame.display.set_caption('AutoChem')
 
-icn = pygame.image.load('icon.ico')
+icn = pygame.image.load('..\\Assets\\icon.ico')
 pygame.display.set_icon(icn)
 
-background = pygame.image.load('Background.png')
+background = pygame.image.load('..\\Assets\\Placeholder.png')
 clock = pygame.time.Clock()
 
 largefont = pygame.font.SysFont("couriernew", 80)
 medfont = pygame.font.SysFont("couriernew", 40)
 
 #buttons
-start = pygame.image.load('start.png')
-opt = pygame.image.load('options.png')
-qui = pygame.image.load('quit.png')
+start = pygame.image.load('..\\Assets\\start.png')
+opt = pygame.image.load('..\\Assets\\options.png')
+qui = pygame.image.load('..\\Assets\\quit.png')
 
 
 FPS = 15

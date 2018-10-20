@@ -1,3 +1,3 @@
-public class Molecule {
+public class Molecule extends Particle{
     // TODO: Write code
 }
