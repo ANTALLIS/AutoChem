@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Autochem</title>
+</head>
+<body>
+Github repo: https://github.com/ANTALLIS/AutoChem<br>
+<br>
+<br>
+<br>
+<br>
+Useful links:<br>
+Python sockets - https://realpython.com/python-sockets/<br>
+powdertoy - <br>
+nanome - <br>
+<br>
+Languages:
+Graphics - python<br>
+Backend - java<br>
+<br>
+API format:<br>
+<br>
+[particleid, [posx, posy, posz]]<br>
+<br>
+Commands for Graphics:<br>
+	DRAW [ID, colour(r, g, b), radius, x, y, z]: Draws with specified radius at coordinated with colour<br>
+	CLEAR: Clears the screen of all particles<br>
+	DELETE:<br>
+	NEW:<br>
+	MOVE:<br>
+<br>
+Commands for backend<br>
+<br>
+<br>
+Objects<br>
+Particle:<br>
+	Methods:<br>
+	getPos(): Returns the current position of the particle as an array [x, y, z]<br>
+<br>
+	Attributes:<br>
+		Id: integer<br>
+		Position : [x, y, z]<br>
+		Velocity: change in  [x, y, z]<br>
+Mass: m <br>
+		Radius: r<br>
+		Forces: Electromagnetic force<br>
+		             Gravity<br>
+<br>
+<br>
+Bond: Line between particle(a) and and particle(b)<br>
+	Methods:<br>
+		getPos():<br>
+Type: each type of particle will be colour coded<br>
+	For example…<br>
+		Red for a oxygen atom<br>
+		White for hydrogen<br>
+		Green for chlorine....<br>
+<br>
+	Attributes:<br>
+		Id: Integer<br>
+		Strength: Integer<br>
+		Connection: [Particle a, Particle b]<br>
+<br>
+Box: A hollow box that no particle can leave or enter; All particles bounce off<br>
+	Methods:<br>
+		getPos():<br>
+		createBox(start_coord, end_coord): Create box at<br>
+coordinates<br>
+	Attributes;<br>
+		start_pos: [x, y, z]<br>
+		end_pos:   [x, y, z]<br>
+<br>

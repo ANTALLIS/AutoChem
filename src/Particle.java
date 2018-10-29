@@ -5,6 +5,7 @@ public class Particle {
 	int id;
 	double mass;
 	double radius;
+	double momentum;
 	Vector3d position;
 	Vector3d velocity;
 	int[] colour;
@@ -17,42 +18,49 @@ public class Particle {
 		this.position = position;
 		this.velocity = velocity;
 		this.colour = colour;
+		this.momentum = mass * velocity.magnitude();
 	}
 	
-	public void update() {
+	public void update(double time) {
 		// Update all attributes of the particle
-		this.updatePosition();
+		this.updatePosition(time);
+	}
+	
+	public void updatePosition(double time) {
+		// Update the position of the particle
+		position.add(velocity/time);
+	}
+	
+	public void updateVelocity(Vector3d acceleration, double time) {
+		// Update the velocity of the particle
+		velocity.add(acceleration/time);
 	}
 	
 	public calulateCollision(Particle P) {
-		
+		// Calculate the new velocities and momenta
+		// Calculate collision point
+		this.
 	}
 	
-	public void updatePosition() {
-		// Update the position of the particle
-		position.add(velocity);
-	}
-	
-	public void updateVelocity(Vector3d acceleration) {
-		// Update the velocity of the particle
-		velocity.add(acceleration);
-	}
-	
-	public boolean isCollisionBox(Box b) {
-		// Check if particle is colliding with box b
-		if(this.inBox(b)) {
+	public static boolean isCollisionParticle(Particle a) {
+		// Check if two particles are colliding
+		if(this.distancesquared(a) < (a.radius + this.radius)*(a.radius + this.radius)))
 			return true;
-		}
 		return false;
 	}
 	
 	
 	
 	// Static methods
-	public static boolean isCollisionParticle(Particle a, Particle b) {
-		// Check if two particles are colliding
-		if(Vector3d.distancesquared(a, b) < (a.radius + b.radius)*(a.radius + b.radius)))
-			return true;
-		return false;
-	}
 }
+
+
+
+
+	/*public boolean isCollisionBox(Box b) {
+		// Check if particle is colliding with box b
+		if(this.inBox(b)) {
+			return true;
+		}
+		return false;
+	}*/
